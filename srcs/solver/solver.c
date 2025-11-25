@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 15:13:27 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/25 17:06:52 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/11/25 18:18:07 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	big_solve(t_stack *a)
 	sort_two_reverse(b);
 	while (check_a(a) == 0)
 	{
-		if ()
+		a = 0;
 	}
-
+	return (0);
 }

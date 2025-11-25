@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 14:51:05 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/24 16:23:53 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/11/25 18:20:16 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ int	main(int ac, char **av)
 			write(2, "Error\n", 6);
 			return (1);
 		}
-	//	sort_three(stack);
-		sort_two(stack);
+		sort_three(stack);
+		//sort_two(stack);
 		print_stack(stack);
 		free(stack->values);
 		free(stack);
