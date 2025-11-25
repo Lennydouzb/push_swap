@@ -21,6 +21,7 @@ SRCS = srcs/main.c \
 	   srcs/solver/solver.c \
 	   srcs/stack_methods/solvemethods/extremum.c \
 	   srcs/stack_methods/solvemethods/interval.c \
+	   srcs/stack_methods/solvemethods/cost.c \
 
 OBJS = $(SRCS:.c=.o)
 

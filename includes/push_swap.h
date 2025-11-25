@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 14:51:19 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/25 16:59:35 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/11/25 19:04:20 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ int		is_new_min(t_stack *stack, int value);
 int		min_pos(t_stack *stack);
 int		max_pos(t_stack *stack);
 int		biggest_smaller_pos(t_stack *stack, int value);
+int		cost(t_stack *sender, t_stack *receiver, int pos_s, int	value_s);
 
 #endif
