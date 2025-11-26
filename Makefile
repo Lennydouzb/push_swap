@@ -22,6 +22,7 @@ SRCS = srcs/main.c \
 	   srcs/stack_methods/solvemethods/extremum.c \
 	   srcs/stack_methods/solvemethods/interval.c \
 	   srcs/stack_methods/solvemethods/cost.c \
+	   srcs/stack_methods/solvemethods/cost_utils.c \
 	   srcs/stack_methods/solvemethods/placer.c \
 
 

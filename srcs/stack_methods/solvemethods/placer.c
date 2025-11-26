@@ -6,13 +6,13 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 11:43:00 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/26 11:44:50 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/11/26 15:20:25 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/push_swap.h"
 
-static void rrotation(int cost_a, int cost_b, t_stack *a, t_stack *b)
+void rrotation(int cost_a, int cost_b, t_stack *a, t_stack *b)
 {
     while (cost_a < 0 && cost_b < 0)
     {
@@ -31,7 +31,7 @@ static void rrotation(int cost_a, int cost_b, t_stack *a, t_stack *b)
         cost_b++;
     }
 }
-static void rotation(int cost_a, int cost_b, t_stack *a, t_stack *b)
+void rotation(int cost_a, int cost_b, t_stack *a, t_stack *b)
 {
     while (cost_a > 0 && cost_b > 0)
     {

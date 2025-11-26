@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 14:51:19 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/25 19:04:20 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/11/26 20:09:20 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ typedef struct s_stack
 	int	*values;
 	int	top;
 }	t_stack;
+
+# define ABS(Value) (Value * (Value >= 0) - Value * (Value < 0))
 
 void	sa(t_stack *a);
 void	sb(t_stack *b);
@@ -55,6 +57,10 @@ int		get_cheapest_pos(t_stack *a, t_stack *b);
 void    place(t_stack *a, t_stack *b, int pos_a);
 void	big_solve(t_stack *a);
 void	print_stack(t_stack *a);
-
+int		cost_to_push_back(t_stack *stack, int value);
+void	rrotation(int cost_a, int cost_b, t_stack *a, t_stack *b);
+void	rotation(int cost_a, int cost_b, t_stack *a, t_stack *b);
+int		calc_cost(int cost1, int cost2);
+void	align(t_stack *a);
 
 #endif
