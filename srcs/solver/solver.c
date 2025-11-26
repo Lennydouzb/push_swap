@@ -61,6 +61,7 @@ void	big_solve(t_stack *a)
 		cheapest_pos = get_cheapest_pos(a, b);
 		place(a, b, cheapest_pos);
 	}
+	print_stack(b);
 	sort_three(a);
 	while (b->top >= 0)
 		pa(a, b);

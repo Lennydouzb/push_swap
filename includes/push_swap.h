@@ -47,12 +47,14 @@ int		is_new_min(t_stack *stack, int value);
 int		min_pos(t_stack *stack);
 int		max_pos(t_stack *stack);
 int		biggest_smaller_pos(t_stack *stack, int value);
+int		smallest_bigger_pos(t_stack *stack, int value);
 int		cost(t_stack *sender, t_stack *receiver, int pos_s, int	value_s);
 int		cost_to_get(t_stack *stack, int pos);
 int		cost_to_push(t_stack *stack, int value);
 int		get_cheapest_pos(t_stack *a, t_stack *b);
 void    place(t_stack *a, t_stack *b, int pos_a);
 void	big_solve(t_stack *a);
+void	print_stack(t_stack *a);
 
 
 #endif

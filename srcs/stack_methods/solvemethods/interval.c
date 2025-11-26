@@ -31,3 +31,24 @@ int	biggest_smaller_pos(t_stack *stack, int value)
 	}
 	return (pos);
 }
+
+int smallest_bigger_pos(t_stack *stack, int value)
+{
+	int i;
+	int small_bigger;
+	int pos;
+
+	small_bigger = value;
+	i = stack->top;
+	pos = i;
+	while (i >= 0)
+	{
+		if ((stack->values)[i] < small_bigger && (stack->values)[i] > value)
+		{
+			small_bigger = (stack->values)[i];
+			pos = i;
+		}
+		--i;
+	}
+	return (pos);
+}
