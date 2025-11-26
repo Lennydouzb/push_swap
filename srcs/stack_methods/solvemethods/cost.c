@@ -35,7 +35,8 @@ int	cost_to_push_back(t_stack *stack, int value)
 	int	pos;
 	if (is_new_max(stack, value) || is_new_min(stack, value))
 		pos = min_pos(stack);
-	pos = smallest_bigger_pos(stack, value);
+	else 
+		pos = smallest_bigger_pos(stack, value);
 	if (pos < stack->top - pos)
 		pos = (pos + 1) * -1;
 	else

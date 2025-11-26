@@ -63,11 +63,27 @@ void	align(t_stack *a)
 		}
 	}	
 }
-
-static void	sort_two_reverse(t_stack *b)
+void	ralign(t_stack *b)
 {
-	if ((b->values)[b->top] < (b->values)[b->top - 1])
-		sb(b);
+	int	max;
+
+	max = max_pos(b);
+	if (max < b->top - max)
+	{
+		while (max > -1)
+		{
+			rrb(b);
+			--max;
+		}
+	}
+	else
+	{
+		while (max < b->top)
+		{
+			rb(b);
+			++max;
+		}
+	}	
 }
 
 void	big_solve(t_stack *a)
@@ -81,13 +97,15 @@ void	big_solve(t_stack *a)
 		return ;
 	while (b->top != 1)
 		pb(a, b);
-	sort_two_reverse(b);
 	while (a->top > 2)
 	{
 		cheapest_pos = get_cheapest_pos(a, b);
 		place(a, b, cheapest_pos);
 	}
+	ralign(b);
 	sort_three(a);
+	print_stack(a);
+	print_stack(b);
 	while (b->top >= 0)
 	{
 		cost_back = cost_to_push_back(a, (b->values)[b->top]);
@@ -97,4 +115,5 @@ void	big_solve(t_stack *a)
 	}
 	free(b->values);
 	free(b);
+	align(a);
 }

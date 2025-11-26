@@ -32,6 +32,7 @@ int	calc_cost(int cost1, int cost2)
 {
 	int	cost;
 
+	cost = 0;
 	both(cost1, cost2, &cost);
 	while (cost1 != 0 || cost2 != 0)
 	{

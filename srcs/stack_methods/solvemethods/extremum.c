@@ -56,7 +56,6 @@ int	max_pos(t_stack *stack)
 			max = (stack->values)[i];
 			pos = i;
 		}
-			
 		--i;
 	}
 	return (pos);

@@ -22,6 +22,7 @@ void	print_stack(t_stack *a)
 		ft_printf("%d\n", (a->values)[i]);
 		i--;
 	}
+	ft_printf("----\n");
 }
 int	main(int ac, char **av)
 {
@@ -36,7 +37,6 @@ int	main(int ac, char **av)
 			return (1);
 		}
 		big_solve(stack);
-		align(stack);
 		print_stack(stack);
 		return (0);
 		//t_stack *a = malloc(sizeof(t_stack));
