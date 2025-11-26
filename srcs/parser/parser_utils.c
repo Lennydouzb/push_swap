@@ -69,10 +69,8 @@ static int	checkstrs (char **av)
 
 char **parse_av(int ac, char **av)
 {
-	int		i;
 	char	**str;
 
-	i = 0;
 	strstostr(ac, av);
 	str = ft_split(av[1], ' ');
 	if (!str)

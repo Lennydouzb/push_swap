@@ -12,7 +12,7 @@
 
 #include "../../includes/push_swap.h"
 
-void	sort_three(t_stack *a)
+static void	sort_three(t_stack *a)
 {
 	if ((a->values)[a->top] > (a->values)[a->top - 1])
 	{
@@ -41,23 +41,29 @@ void	sort_three(t_stack *a)
 	}
 }
 
-void	sort_two_reverse(t_stack *b)
+static void	sort_two_reverse(t_stack *b)
 {
 	if ((b->values)[b->top] > (b->values)[b->top - 1])
 		sb(b);
 }
 
-int	big_solve(t_stack *a)
+void	big_solve(t_stack *a)
 {
 	t_stack *b;
+	int	cheapest_pos;
 
 	b = ft_emptynewstack(a->top + 1);
 	while (b->top != 2)
 		pb(a, b);
 	sort_two_reverse(b);
-	while (check_a(a) == 0)
+	while (a->top > 2)
 	{
-		a = 0;
+		cheapest_pos = get_cheapest_pos(a, b);
+		place(a, b, cheapest_pos);
 	}
-	return (0);
+	sort_three(a);
+	while (b->top >= 0)
+		pa(a, b);
+	free(b->values);
+	free(b);
 }

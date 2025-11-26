@@ -40,7 +40,6 @@ t_stack	*ft_newstack(int *values, size_t size);
 int		check_values(int *values, size_t size);
 void	freeall_strs(char **param);
 t_stack *parse(int ac, char **av);
-void	sort_three(t_stack *a);
 t_stack *ft_emptynewstack(size_t size);
 int		check_a(t_stack *a);
 int		is_new_max(t_stack *stack, int value);
@@ -49,5 +48,11 @@ int		min_pos(t_stack *stack);
 int		max_pos(t_stack *stack);
 int		biggest_smaller_pos(t_stack *stack, int value);
 int		cost(t_stack *sender, t_stack *receiver, int pos_s, int	value_s);
+int		cost_to_get(t_stack *stack, int pos);
+int		cost_to_push(t_stack *stack, int value);
+int		get_cheapest_pos(t_stack *a, t_stack *b);
+void    place(t_stack *a, t_stack *b, int pos_a);
+void	big_solve(t_stack *a);
+
 
 #endif

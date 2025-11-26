@@ -26,9 +26,7 @@ void	print_stack(t_stack *a)
 int	main(int ac, char **av)
 {
 	t_stack *stack;
-	int	i;
 
-	i = 0;
 	if (ac > 1)
 	{
 		stack = parse(ac - 1, av);
@@ -37,11 +35,10 @@ int	main(int ac, char **av)
 			write(2, "Error\n", 6);
 			return (1);
 		}
-		sort_three(stack);
-		//sort_two(stack);
 		print_stack(stack);
-		free(stack->values);
-		free(stack);
+		big_solve(stack);
+		print_stack(stack);
+		return (0);
 		//t_stack *a = malloc(sizeof(t_stack));
 		//a->values = malloc(sizeof(int) * 500);
 		//a->top = 8;
