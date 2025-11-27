@@ -40,7 +40,11 @@ static void	sort_three(t_stack *a)
 		}
 	}
 }
-
+static void	sort_two(t_stack *b)
+{
+	if ((b->values)[b->top] < (b->values)[b->top - 1])
+		sb(b);
+}
 void	align(t_stack *a)
 {
 	int	min;
@@ -80,10 +84,33 @@ void	big_solve(t_stack *a)
 		cheapest_pos = get_cheapest_pos(a, b);
 		place(a, b, cheapest_pos);
 	}
-	//ralign(b);
 	sort_three(a);
-	print_stack(a);
-	print_stack(b);
+	while (b->top >= 0)
+	{
+		cost_back = cost_to_push_back(a, (b->values)[b->top]);
+		rotation(cost_back, 0, a, b);
+		rrotation(cost_back, 0, a, b);
+		pa(a, b);
+	}
+	free(b->values);
+	free(b);
+	align(a);
+}
+
+void	small_solve(t_stack *a)
+{
+	t_stack *b;
+	int		cost_back;
+
+	b = ft_emptynewstack(a->top + 1);
+	if (!b)
+		return ;
+	while (a->top > 2)
+		pb(a, b);
+	if (a->top == 2)
+		sort_three(a);
+	else if (a->top == 1)
+		sort_two(a);
 	while (b->top >= 0)
 	{
 		cost_back = cost_to_push_back(a, (b->values)[b->top]);

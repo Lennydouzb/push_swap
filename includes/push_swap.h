@@ -29,7 +29,6 @@ void	sb(t_stack *b);
 void	ss(t_stack *a, t_stack *b);
 void	pa(t_stack *a, t_stack *b);
 void	pb(t_stack *a, t_stack *b);
-void	sort_two(t_stack *a);
 void	ra(t_stack *a);
 void	rb(t_stack *b);
 void	rr(t_stack *a, t_stack *b);
@@ -62,5 +61,7 @@ void	rrotation(int cost_a, int cost_b, t_stack *a, t_stack *b);
 void	rotation(int cost_a, int cost_b, t_stack *a, t_stack *b);
 int		calc_cost(int cost1, int cost2);
 void	align(t_stack *a);
+void	small_solve(t_stack *a);
+
 
 #endif
