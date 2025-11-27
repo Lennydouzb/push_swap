@@ -13,11 +13,11 @@
 
 int	biggest_smaller_pos(t_stack *stack, int value)
 {
-	int	i;
-	int	big_smaller;
-	int	pos;
+	int		i;
+	long	big_smaller;
+	int		pos;
 
-	big_smaller = value;
+	big_smaller = -2147483649;
 	i = stack->top;
 	pos = i;
 	while (i >= 0)
@@ -35,10 +35,10 @@ int	biggest_smaller_pos(t_stack *stack, int value)
 int smallest_bigger_pos(t_stack *stack, int value)
 {
 	int i;
-	int small_bigger;
+	long small_bigger;
 	int pos;
 
-	small_bigger = value;
+	small_bigger = 2147483648;
 	i = stack->top;
 	pos = i;
 	while (i >= 0)

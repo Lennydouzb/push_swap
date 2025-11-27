@@ -12,19 +12,19 @@
 
 #include "../../../includes/push_swap.h"
 
-static void both(int cost1, int cost2, int *cost)
+static void both(int *cost1, int *cost2, int *cost)
 {
-	while (cost1 > 0 && cost2 > 0)
+	while ((*cost1) > 0 && (*cost2) > 0)
 	{
 		++(*cost);
-		--cost1;
-		--cost2;
+		--(*cost1);
+		--(*cost2);
 	}
-	while (cost1 < 0 && cost2 < 0)
+	while ((*cost1) < 0 && (*cost2) < 0)
 	{
 		++(*cost);
-		++cost1;
-		++cost2;
+		++(*cost1);
+		++(*cost2);
 	}
 }
 
@@ -33,7 +33,7 @@ int	calc_cost(int cost1, int cost2)
 	int	cost;
 
 	cost = 0;
-	both(cost1, cost2, &cost);
+	both(&cost1, &cost2, &cost);
 	while (cost1 != 0 || cost2 != 0)
 	{
 		if (cost1 > 0)

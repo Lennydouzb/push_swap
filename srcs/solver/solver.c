@@ -63,7 +63,7 @@ void	align(t_stack *a)
 		}
 	}	
 }
-void	ralign(t_stack *b)
+/*void	ralign(t_stack *b)
 {
 	int	max;
 
@@ -84,7 +84,7 @@ void	ralign(t_stack *b)
 			++max;
 		}
 	}	
-}
+}*/
 
 void	big_solve(t_stack *a)
 {
@@ -102,7 +102,7 @@ void	big_solve(t_stack *a)
 		cheapest_pos = get_cheapest_pos(a, b);
 		place(a, b, cheapest_pos);
 	}
-	ralign(b);
+	//ralign(b);
 	sort_three(a);
 	print_stack(a);
 	print_stack(b);

@@ -69,7 +69,7 @@ int	min_pos(t_stack *stack)
 
 	min = (stack->values)[stack->top];
 	i = stack->top;
-	pos = 0;
+	pos = i;
 	while (i >= 0)
 	{
 		if ((stack->values)[i] < min)
