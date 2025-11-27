@@ -48,23 +48,20 @@ static void	sort_two(t_stack *b)
 void	align(t_stack *a)
 {
 	int	min;
+	int	rotations;
 
 	min = min_pos(a);
-	if (min < a->top - min)
+	if (min + 1 < a->top - min)
 	{
-		while (min > -1)
-		{
+		rotations = min + 1;
+		while (rotations-- > 0)
 			rra(a);
-			--min;
-		}
 	}
 	else
 	{
-		while (min < a->top)
-		{
+		rotations = a->top - min;
+		while (rotations-- > 0)
 			ra(a);
-			++min;
-		}
 	}	
 }
 

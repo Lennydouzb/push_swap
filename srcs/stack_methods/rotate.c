@@ -21,7 +21,7 @@ void	ra(t_stack *a)
 	if (a->top > 0)
 	{
 		tmp = (a->values)[a->top];
-		while (temp_top >= 0)
+		while (temp_top > 0)
 		{
 			(a->values)[temp_top] = (a->values)[temp_top - 1];
 			--temp_top;
@@ -41,7 +41,7 @@ void	rb(t_stack *b)
 	if (b->top > 0)
 	{
 		tmp = (b->values)[b->top];
-		while (temp_top >= 0)
+		while (temp_top > 0)
 		{
 			(b->values)[temp_top] = (b->values)[temp_top - 1];
 			--temp_top;
@@ -60,7 +60,7 @@ void	rr(t_stack *a, t_stack *b)
 	if (b->top > 0)
 	{
 		tmp = (b->values)[b->top];
-		while (--temp_top >= 0)
+		while (--temp_top > 0)
 			(b->values)[temp_top] = (b->values)[temp_top - 1];
 		(b->values)[0] = tmp;
 	}
@@ -68,7 +68,7 @@ void	rr(t_stack *a, t_stack *b)
 	if (a->top > 0)
 	{
 		tmp = (a->values)[a->top];
-		while (temp_top >= 0)
+		while (temp_top > 0)
 		{
 			(a->values)[temp_top] = (a->values)[temp_top - 1];
 			--temp_top;
