@@ -63,28 +63,6 @@ void	align(t_stack *a)
 		}
 	}	
 }
-/*void	ralign(t_stack *b)
-{
-	int	max;
-
-	max = max_pos(b);
-	if (max < b->top - max)
-	{
-		while (max > -1)
-		{
-			rrb(b);
-			--max;
-		}
-	}
-	else
-	{
-		while (max < b->top)
-		{
-			rb(b);
-			++max;
-		}
-	}	
-}*/
 
 void	big_solve(t_stack *a)
 {
