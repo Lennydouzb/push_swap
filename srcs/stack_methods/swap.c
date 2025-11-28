@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 15:00:00 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/17 13:51:39 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/11/28 11:25:58 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	sb(t_stack *b)
 void	ss(t_stack *a, t_stack *b)
 {
 	int	tmp;
-	int atmp;
+	int	atmp;
 
 	if (b->top > 0)
 	{

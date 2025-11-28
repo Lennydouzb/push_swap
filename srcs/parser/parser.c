@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 12:55:59 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/24 14:51:41 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/11/28 11:21:30 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ static int	*parse_av_to_ints(int *ac, char **av)
 	return (ints);
 }
 
-t_stack *parse(int ac, char **av)
+t_stack	*parse(int ac, char **av)
 {
 	int		*parsed;
-	t_stack *stack;
+	t_stack	*stack;
 
 	parsed = parse_av_to_ints(&ac, av);
 	if (!parsed)

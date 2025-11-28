@@ -6,13 +6,20 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 19:01:23 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/26 19:14:02 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/11/28 11:41:07 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/push_swap.h"
 
-static void both(int *cost1, int *cost2, int *cost)
+int	abs(int nb)
+{
+	if (nb < 0)
+		return (nb * -1);
+	return (nb);
+}
+
+static void	both(int *cost1, int *cost2, int *cost)
 {
 	while ((*cost1) > 0 && (*cost2) > 0)
 	{

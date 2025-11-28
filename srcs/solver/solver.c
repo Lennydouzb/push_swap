@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 15:13:27 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/26 20:09:51 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/11/28 11:35:45 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,13 @@ static void	sort_three(t_stack *a)
 		}
 	}
 }
+
 static void	sort_two(t_stack *b)
 {
 	if ((b->values)[b->top] < (b->values)[b->top - 1])
 		sb(b);
 }
+
 void	align(t_stack *a)
 {
 	int	min;
@@ -62,12 +64,12 @@ void	align(t_stack *a)
 		rotations = a->top - min;
 		while (rotations-- > 0)
 			ra(a);
-	}	
+	}
 }
 
 void	big_solve(t_stack *a)
 {
-	t_stack *b;
+	t_stack	*b;
 	int		cheapest_pos;
 	int		cost_back;
 
@@ -96,7 +98,7 @@ void	big_solve(t_stack *a)
 
 void	small_solve(t_stack *a)
 {
-	t_stack *b;
+	t_stack	*b;
 	int		cost_back;
 
 	b = ft_emptynewstack(a->top + 1);

@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 13:58:30 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/17 14:32:43 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/11/28 11:28:23 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../../includes/push_swap.h"
@@ -30,7 +30,6 @@ void	rra(t_stack *a)
 	ft_printf("rra\n");
 }
 
-
 void	rrb(t_stack *b)
 {
 	int	tmp;
@@ -48,7 +47,6 @@ void	rrb(t_stack *b)
 		(b->values)[b->top] = tmp;
 	}
 	ft_printf("rrb\n");
-
 }
 
 void	rrr(t_stack *a, t_stack *b)

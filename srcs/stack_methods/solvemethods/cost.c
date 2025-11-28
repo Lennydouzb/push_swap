@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 17:08:00 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/26 20:14:18 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/11/28 11:40:12 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,10 @@ int	cost_to_push(t_stack *stack, int value)
 int	cost_to_push_back(t_stack *stack, int value)
 {
 	int	pos;
+
 	if (is_new_max(stack, value) || is_new_min(stack, value))
 		pos = min_pos(stack);
-	else 
+	else
 		pos = smallest_bigger_pos(stack, value);
 	if (pos < stack->top - pos)
 		pos = (pos + 1) * -1;
@@ -66,7 +67,7 @@ int	get_cheapest_pos(t_stack *a, t_stack *b)
 	while (i <= a->top)
 	{
 		current_cost = cost(a, b, i, (a->values)[i]);
-		if (ABS(current_cost) < ABS(cheapest_cost))
+		if (abs(current_cost) < abs(cheapest_cost))
 		{
 			cheapest_cost = current_cost;
 			cheapest_pos = i;

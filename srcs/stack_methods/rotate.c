@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 17:44:37 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/17 13:57:09 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/11/28 11:27:59 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	ra(t_stack *a)
 	}
 	ft_printf("ra\n");
 }
-
 
 void	rb(t_stack *b)
 {

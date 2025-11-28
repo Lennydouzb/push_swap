@@ -6,23 +6,21 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 14:51:19 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/26 20:09:20 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/11/28 11:42:21 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include "../srcs/printf/ft_printf.h"
-#include "../srcs/libft/libft.h"
+# include "../srcs/printf/ft_printf.h"
+# include "../srcs/libft/libft.h"
 
 typedef struct s_stack
 {
 	int	*values;
 	int	top;
 }	t_stack;
-
-# define ABS(Value) (Value * (Value >= 0) - Value * (Value < 0))
 
 void	sa(t_stack *a);
 void	sb(t_stack *b);
@@ -40,8 +38,8 @@ int		*strstoints(char **av);
 t_stack	*ft_newstack(int *values, size_t size);
 int		check_values(int *values, size_t size);
 void	freeall_strs(char **param);
-t_stack *parse(int ac, char **av);
-t_stack *ft_emptynewstack(size_t size);
+t_stack	*parse(int ac, char **av);
+t_stack	*ft_emptynewstack(size_t size);
 int		check_a(t_stack *a);
 int		is_new_max(t_stack *stack, int value);
 int		is_new_min(t_stack *stack, int value);
@@ -49,19 +47,18 @@ int		min_pos(t_stack *stack);
 int		max_pos(t_stack *stack);
 int		biggest_smaller_pos(t_stack *stack, int value);
 int		smallest_bigger_pos(t_stack *stack, int value);
-int		cost(t_stack *sender, t_stack *receiver, int pos_s, int	value_s);
+int		cost(t_stack *sender, t_stack *receiver, int pos_s, int value_s);
 int		cost_to_get(t_stack *stack, int pos);
 int		cost_to_push(t_stack *stack, int value);
 int		get_cheapest_pos(t_stack *a, t_stack *b);
-void    place(t_stack *a, t_stack *b, int pos_a);
+void	place(t_stack *a, t_stack *b, int pos_a);
 void	big_solve(t_stack *a);
-void	print_stack(t_stack *a);
 int		cost_to_push_back(t_stack *stack, int value);
 void	rrotation(int cost_a, int cost_b, t_stack *a, t_stack *b);
 void	rotation(int cost_a, int cost_b, t_stack *a, t_stack *b);
 int		calc_cost(int cost1, int cost2);
 void	align(t_stack *a);
 void	small_solve(t_stack *a);
-
+int		abs(int nb);
 
 #endif

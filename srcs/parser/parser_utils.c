@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 13:28:36 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/24 14:26:53 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/11/28 11:24:43 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ static int	count_numbers(char **strs)
 
 static void	strstostr(int ac, char **av)
 {
-
 	int	i;
 	int	k;
 
@@ -40,7 +39,7 @@ static void	strstostr(int ac, char **av)
 	}
 }
 
-static int	checkstrs (char **av)
+static int	checkstrs(char **av)
 {
 	int	i;
 	int	k;
@@ -67,20 +66,20 @@ static int	checkstrs (char **av)
 	return (1);
 }
 
-char **parse_av(int ac, char **av)
+char	**parse_av(int ac, char **av)
 {
 	char	**str;
 
 	strstostr(ac, av);
 	str = ft_split(av[1], ' ');
 	if (!str)
-		return  (NULL);
+		return (NULL);
 	if (checkstrs(str) == 0)
 		return (NULL);
 	return (str);
 }
 
-int *strstoints(char **strs)
+int	*strstoints(char **strs)
 {
 	int	*ints;
 	int	i;

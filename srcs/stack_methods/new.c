@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 16:07:33 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/26 15:32:29 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/11/28 11:27:45 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,13 @@ static void	rev(int *values, size_t size)
 
 t_stack	*ft_newstack(int *values, size_t size)
 {
-	t_stack *stack;
+	t_stack	*stack;
 
 	stack = ft_calloc(sizeof(t_stack), 1);
 	if (!stack)
 	{
 		free(values);
-		return(NULL);
+		return (NULL);
 	}
 	rev(values, size);
 	stack->values = values;
@@ -43,13 +43,13 @@ t_stack	*ft_newstack(int *values, size_t size)
 	return (stack);
 }
 
-t_stack *ft_emptynewstack(size_t size)
+t_stack	*ft_emptynewstack(size_t size)
 {
-	t_stack *stack;
+	t_stack	*stack;
 
 	stack = ft_calloc(sizeof(t_stack), 1);
 	if (!stack)
-		return(NULL);
+		return (NULL);
 	stack->values = ft_calloc(sizeof(int), size);
 	stack->top = -1;
 	return (stack);

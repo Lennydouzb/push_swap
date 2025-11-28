@@ -6,13 +6,13 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 16:05:54 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/26 20:09:07 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/11/28 11:31:10 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/push_swap.h"
 
-int is_new_max(t_stack *stack, int value)
+int	is_new_max(t_stack *stack, int value)
 {
 	int	i;
 
