@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 15:13:27 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/28 11:35:45 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/12/04 10:08:37 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void	align(t_stack *a)
 	}
 }
 
-void	big_solve(t_stack *a)
+int	big_solve(t_stack *a)
 {
 	t_stack	*b;
 	int		cheapest_pos;
@@ -75,7 +75,7 @@ void	big_solve(t_stack *a)
 
 	b = ft_emptynewstack(a->top + 1);
 	if (!b)
-		return ;
+		return (0);
 	while (b->top != 1)
 		pb(a, b);
 	while (a->top > 2)
@@ -91,19 +91,19 @@ void	big_solve(t_stack *a)
 		rrotation(cost_back, 0, a, b);
 		pa(a, b);
 	}
-	free(b->values);
-	free(b);
+	free_stack(b);
 	align(a);
+	return (1);
 }
 
-void	small_solve(t_stack *a)
+int	small_solve(t_stack *a)
 {
 	t_stack	*b;
 	int		cost_back;
 
 	b = ft_emptynewstack(a->top + 1);
 	if (!b)
-		return ;
+		return (0);
 	while (a->top > 2)
 		pb(a, b);
 	if (a->top == 2)
@@ -117,7 +117,7 @@ void	small_solve(t_stack *a)
 		rrotation(cost_back, 0, a, b);
 		pa(a, b);
 	}
-	free(b->values);
-	free(b);
+	free_stack(b);
 	align(a);
+	return (1);
 }

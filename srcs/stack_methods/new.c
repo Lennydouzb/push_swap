@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 16:07:33 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/28 11:27:45 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/12/04 09:59:10 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,11 @@ t_stack	*ft_emptynewstack(size_t size)
 	if (!stack)
 		return (NULL);
 	stack->values = ft_calloc(sizeof(int), size);
+	if (!stack->values)
+	{
+		free(stack);
+		return (NULL);
+	}
 	stack->top = -1;
 	return (stack);
 }

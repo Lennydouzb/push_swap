@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 14:51:19 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/28 12:44:01 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/12/04 10:10:20 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,14 +52,15 @@ int		cost_to_get(t_stack *stack, int pos);
 int		cost_to_push(t_stack *stack, int value);
 int		get_cheapest_pos(t_stack *a, t_stack *b);
 void	place(t_stack *a, t_stack *b, int pos_a);
-void	big_solve(t_stack *a);
+int		big_solve(t_stack *a);
 int		cost_to_push_back(t_stack *stack, int value);
 void	rrotation(int cost_a, int cost_b, t_stack *a, t_stack *b);
 void	rotation(int cost_a, int cost_b, t_stack *a, t_stack *b);
 int		calc_cost(int cost1, int cost2);
 void	align(t_stack *a);
-void	small_solve(t_stack *a);
+int		small_solve(t_stack *a);
 int		abs(int nb);
 int		check_ovunflow(char **strs);
+void	free_stack(t_stack *stack);
 
 #endif

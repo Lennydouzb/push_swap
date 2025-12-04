@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 13:28:36 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/28 12:44:41 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/12/04 09:43:28 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,9 +75,15 @@ char	**parse_av(int ac, char **av)
 	if (!str)
 		return (NULL);
 	if (checkstrs(str) == 0)
+	{
+		freeall_strs(str);
 		return (NULL);
+	}
 	if (check_ovunflow(str) == 0)
+	{
+		freeall_strs(str);
 		return (NULL);
+	}
 	return (str);
 }
 

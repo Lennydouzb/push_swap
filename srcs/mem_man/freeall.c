@@ -6,7 +6,7 @@
 /*   By: ldesboui <ldesboui@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 12:45:14 by ldesboui          #+#    #+#             */
-/*   Updated: 2025/11/28 11:34:37 by ldesboui         ###   ########.fr       */
+/*   Updated: 2025/12/04 10:00:34 by ldesboui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,10 @@ void	freeall_strs(char **param)
 		++i;
 	}
 	free(param);
+}
+
+void	free_stack(t_stack *stack)
+{
+	free(stack->values);
+	free(stack);
 }
