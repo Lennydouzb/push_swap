@@ -14,7 +14,7 @@ make
 To use the program :
 
 ```bash
-./push_swap <numbers> [<numbers>] [<"numbers">] [...]
+./push_swap <number> [<number>] [<"number [number]">] [...]
 ```
 # Technical choice
 
