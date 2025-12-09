@@ -11,16 +11,15 @@ To compile the project :
 ```make
 make
 ```
-
-# Technical choice
-
-This push_swap uses turk algorithm, see more in [resource section](#rescources)
-
-To use the program
+To use the program :
 
 ```bash
 ./push_swap <numbers> [<numbers>] [<"numbers">] [...]
 ```
+# Technical choice
+
+This push_swap uses turk algorithm, see more in [resource section](#rescources)
+
 # Resources
 
 A nice page to learn more about turk algorithm: https://medium.com/@ayogun/push-swap-c1f5d2d41e97
