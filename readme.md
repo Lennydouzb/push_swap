@@ -36,6 +36,7 @@ sa (swap a): Swap the first 2 elements at the top of stack a.
 
 sb (swap b): Swap the first 2 elements at the top of stack b.
     Do nothing if there is only one element or none.
+
 ss : sa and sb at the same time.
 
 pa (push a): Take the first element at the top of b and put it at the top of a.
